@@ -5,6 +5,8 @@ const articleRouter = require('./routes/articles')
 const methodOverride = require('method-override')
 const app = express()
 
+const PORT = process.env.PORT || 5000;
+
 mongoose.set('strictQuery', false);
 
 
@@ -35,4 +37,6 @@ app.get('/' , async (req,res) => {
 
 app.use('/articles', articleRouter)
 
-app.listen(5000)
+app.listen(PORT, () => {
+    console.log(`Server started at port ${PORT}`);
+})
