@@ -17,8 +17,10 @@ mongoose.connect('mongodb://localhost/blog' , {
 
 
 // mongoose.set("strictQuery", false);
-// mongoose.connect(process.env.MONGO_URL, () => {
-//     console.log("Connected to MongoDB");
+// mongoose.connect(process.env.MONGO_URL,  {
+//         useNewUrlParser: true,
+//         useUnifiedTopology: true,
+//         // console.log("Connected to MongoDB");
 // });
 /*
 mongoose.connect('mongodb://127.0.0.1:27017/test').
